@@ -1,4 +1,6 @@
-
+/**
+ * 2017-9-14 sun zhiyue
+ */
 var arr = [1, 2, 3];
 console.log(arr.length);
 
