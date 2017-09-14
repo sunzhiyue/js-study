@@ -7,11 +7,11 @@ var obj = {
 
     b: 1,
 
-    d: function(){
-      console.log( `a =>${ this.a },b =>${this.b},d =>${this.d}`);
+    da: function(){
+      console.log( `a =>${ this.a },b =>${this.b},d =>${this.da}`);
     }
     
 };
 
-obj.d();
+obj.da();
 
