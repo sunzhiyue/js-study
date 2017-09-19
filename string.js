@@ -3,12 +3,12 @@
  */
 var str = '    hello world 1     ';
 //var str = ''
-console.log(str.charAt(0));
+/*console.log(str.charAt(0));
 console.log(str.charAt(-4));
 console.log(str.charAt(14));
 console.log(str.charAt(7));
-console.log(str.concat(' how are you'));
-console.log(str.concat(' '));
+console.log(str.concat(' how are you')); //添加
+console.log(str.concat(' '));*/
 
 console.log('-------------------')
 console.log(str.includes('hello'));
@@ -18,7 +18,7 @@ console.log(str.includes('hello 1', -1));
 console.log(str.includes(''))
 console.log('-----------------------')
 
-console.log(str.endsWith('1'))
+/*console.log(str.endsWith('1'))
 console.log(str.endsWith('hello', 5))
 console.log(str.endsWith('2'))
 console.log(str.endsWith('hello', -1))
@@ -97,4 +97,4 @@ console.log('---------------------')
 
 console.log(str.trim());
 console.log(str.trimLeft());
-console.log(str.trimRight());
+console.log(str.trimRight());*/

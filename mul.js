@@ -20,7 +20,7 @@ for(var q = 1; q <=9; q++){
     var str = '';
     for (var w = 1;w <= q; w++){
         str = str + `${q * w}\t`
-    };
+    };  
     str = `${q}\t` + str;
     console.log(str);
 }
