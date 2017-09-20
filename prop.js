@@ -14,7 +14,8 @@ console.log(` function.prototype.prototype -> ${ Function.prototype.prototype}`)
 console.log(` function.prototype.proto -> ${ Function.prototype.__proto__}`);
 console.log(` Object.prototype.proto -> ${ Object.prototype.__proto__}`);
 console.log(Object.prototype.__proto__ === Object.prototype);
-console.log(Function.prototype.__proto__ === null)
+console.log(Function.prototype.__proto__ === null);
+
 var car = function(){
     age : 1
     
@@ -30,3 +31,4 @@ var han = new car()
 console.log(typeof han)
 console.log(typeof han.__proto__)
 console.log(typeof han.prototype)
+
