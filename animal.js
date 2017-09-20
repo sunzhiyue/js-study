@@ -20,7 +20,10 @@ function mammals(){
 
 };
 mammals.prototype = {
-    v: 'viviparity'
+    v: 'viviparity',
+    cd: function(){
+        console.log('cd')
+    }
 }
 mammals.prototype.__proto__ = animal.prototype;
 
@@ -73,3 +76,8 @@ console.log(dove.sk, dove.l, dove.name);
 console.log(chicken.l, chicken.m);
 console.log(dog.r, dog.b, dog.le);
 console.log(dolphin.s, dolphin.w);
+dog.cd();
+
+
+console.log(typeof Object.create(Function,{}))
+console.log(typeof Object.create(Function.prototype,{}))
