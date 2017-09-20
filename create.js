@@ -4,9 +4,10 @@
 var person = {
     age: 1
 };
-
+//第一
 var a = Object.create(person,{
     age:{
+        enumerable:false,
         value: 32
     } 
 });
@@ -16,7 +17,7 @@ person.ab = function(){
 }
 var b = Object.create(person, {})
 console.log(a.age, b.age);
-console.log(person.ab())
+console.log(person.ab());
 
 console.log('#############################')
 var arr = [1, 2, 3, 4, 5]
@@ -52,3 +53,4 @@ console.log(f.__proto__.constructor);
 console.log(Boolean.prototype === f.__proto__)
 console.log(Object.prototype === f.__proto__.__proto__)
 console.log(Object.prototype, Object.prototype.__proto__, Object.__proto__, Object.__proto__.prototype)
+
