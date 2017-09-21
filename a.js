@@ -23,3 +23,4 @@ Object.defineProperty(b,'len',{
 )
 b.arr.length = 10;
 console.log(b.len);
+console.log(b.obj.len);

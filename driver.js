@@ -5,9 +5,9 @@
 var device = ['/dev/conlose','/dev/dis' ];
 
 function open(dev){
-    for(var n = 0; n<=driver.length; n++){
-        driver[n].type === dev;
-        driver[n].open();
+    for(var n = 0; n < driver.length; n++){
+       if (driver[n].type === dev){
+        driver[n].open();}
         return n;
         
     }
@@ -76,7 +76,7 @@ write(fd, 'hi');
 read(fd);
 close(fd);
 
-var fd = open('/dev/dis');
+ fd = open('/dev/dis');
 write(fd, 'hello');
 //read(fd);
 close(fd);
