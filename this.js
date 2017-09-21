@@ -30,3 +30,4 @@ var obj = {
     }
 }
 console.log(obj.add(5),obj.b);
+

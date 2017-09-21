@@ -30,7 +30,8 @@ sun.getAge = function(){
 }
 console.log(sun.getAge());
 
-Function.prototype.__proto__. g = function(){
+Function.prototype.__proto__.g = function(){
     return g + 1;
 }
 console.log(sun.g(1))
+

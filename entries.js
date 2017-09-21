@@ -16,6 +16,7 @@ var o = Object.create(null, {
     }
 });
 console.log(Object.entries(o));
+console.log(Object.getOwnPropertyNames(o));
 var q = {
     n : 1,
     m : 2,
