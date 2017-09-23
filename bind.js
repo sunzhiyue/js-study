@@ -7,4 +7,5 @@ function fun(b){
 }
 console.log(fun.apply(a,[2]),a);
 
-console.log(fun.bind(a))
+
+var b = fun.bind()

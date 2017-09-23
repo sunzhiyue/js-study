@@ -23,3 +23,4 @@ var q = {
     b : 'tom'
 }
 console.log(Object.entries(q));
+

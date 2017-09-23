@@ -4,7 +4,7 @@
 var o = Object.create(null, {
     foo: {
         enumerable: false,
-        value:'hello'
+        value: 'hello'
     },
     bar:{
         enumerable: true,
@@ -12,6 +12,6 @@ var o = Object.create(null, {
     }
 });
 var obj = {};
-Object.assign(obj,o);
+Object.assign(obj, o);
 console.log(o, obj);
 console.log(o.foo, o.bar);
