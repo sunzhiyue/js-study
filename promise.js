@@ -35,6 +35,6 @@ function asyncFunction() {
                 resolve(data);
             }
         });
-      })
+    })
   }
 
