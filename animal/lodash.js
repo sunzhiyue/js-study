@@ -84,5 +84,22 @@ var arr2 = [1, 2, 3, 4]
 var evrens = _.remove(arr2, function(n){
     return n % 2 == 0;
 })
-console.log(evrens)
-module.exports = _;
+
+console.log(_.sortedUniq([1, 1, 1, 3, 3, 1, 3, 4]))
+console.log(_.without([ 3, 4, 3, 4, 1, 5 ], 3, 4))
+console.log (_.sortedIndexOf([4, 5, 6, 4, 5, 6], 5))
+
+console.log(_.xor([2, 1], [2, 2], [2, 3], [3, 2], [4, 3, 2]));
+console.log(_.xorBy([2.1, 1.2], [2.3, 3.4], Math.floor));
+console.log(_.xorBy([{ 'x': 1}], [{ 'x' : 2}, {'x': 1}], 'x'));
+
+console.log(_.zip(['a', 'b'], [1, 2], [true, false]));
+console.log(_.zipObject(['a', 'b'], [1, 2], [3, 4]));
+
+console.log(_.zipObjectDeep(['a.b[0].c', 'a.b[1].d'], [1, 2]))
+console.log(_.zipWith([1, 2], [10, 20], [100, 200], function(a, b, c){
+    return a * b + c;
+}))
+
+console.log(_.countBy[6.1, 4.2, 6.3], Math.floor);
+console.log(_.countBy(['one', 'two', 'three', 'four', 'five'],'length'));
