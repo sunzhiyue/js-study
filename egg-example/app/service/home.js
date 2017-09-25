@@ -16,7 +16,9 @@ module.exports = app => {
     }
     * date() {
       const d = new Date();
-      return `${d.getFullYear()} - ${this.format(d.getMonth() + 1)} - ${this.format(d.getDate())} - ${this.format(d.getHours())} : ${this.format(d.getMinutes())} : ${this.format(d.getSeconds())}`;
+      return `${d.getFullYear()} - ${this.format(d.getMonth() + 1)}
+       - ${this.format(d.getDate())} - ${this.format(d.getHours())} :
+        ${this.format(d.getMinutes())} : ${this.format(d.getSeconds())}`;
     }
     format(a) {
       if (a < 10) {

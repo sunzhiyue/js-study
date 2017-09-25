@@ -11,4 +11,5 @@ module.exports = app => {
   app.get('/help', 'home.help');
   app.post('/help', 'home.help');
   app.post('/date', 'home.date');
+  app.post('/test', 'home.test');
 };
