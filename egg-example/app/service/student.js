@@ -1,10 +1,13 @@
+/**
+ * 2017-9-25  sunzhiyue
+ */
 'use strict';
 
 module.exports = app => {
   class Test extends app.Service {
     * create(param) {
       try {
-        yield app.mysql.insert('user', param);
+        yield app.mysql.insert('student', param);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
@@ -15,7 +18,7 @@ module.exports = app => {
     * get(req) {
       let res;
       try {
-        res = yield app.mysql.get('user', req);
+        res = yield app.mysql.get('student', req);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
@@ -25,7 +28,7 @@ module.exports = app => {
 
     * delete(param) {
       try {
-        yield app.mysql.delete('user', param);
+        yield app.mysql.delete('student', param);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
@@ -34,7 +37,7 @@ module.exports = app => {
     }
     * update(param) {
       try {
-        yield app.mysql.update('user', param);
+        yield app.mysql.update('student', param);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
