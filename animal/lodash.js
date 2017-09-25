@@ -103,3 +103,24 @@ console.log(_.zipWith([1, 2], [10, 20], [100, 200], function(a, b, c){
 
 console.log(_.countBy[6.1, 4.2, 6.3], Math.floor);
 console.log(_.countBy(['one', 'two', 'three', 'four', 'five'],'length'));
+
+console.log(_.every([true, 1, null, 'yes'], Boolean));
+
+var users = [
+    {'user': 'barney', 'age': 34, 'active': false},
+    {'user': 'fred', 'age': 40, 'active': false}
+];
+console.log(_.every(users, {'user': 'barney', 'active': false}))
+console.log(_.every(users, ['active', false]));
+console.log(_.every(users, 'active'))
+
+var user = [
+    {'user': 'barney', 'age': 36, 'active': true},
+    {'user': 'fred', 'age': 40, 'active': false}
+];
+console.log(_.filter(user, function(o) {
+    return !o.active;
+}));
+console.log(_.filter(user, {'age': 36, 'active': true}));
+console.log(_.filter(user, ['active', false]));
+console.log(users, 'active');
