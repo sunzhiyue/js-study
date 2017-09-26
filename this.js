@@ -1,11 +1,11 @@
 /**
  * 2017-9-18  sunzhiyue
  */
-/*function add(x){
+function add(x){
     return this.a + x
 }
 var a = 1;
-console.log(add(2));*/
+console.log(add(2));
 
 
 var obj = {
