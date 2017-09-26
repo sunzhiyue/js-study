@@ -44,6 +44,32 @@ module.exports = app => {
       }
       return true;
     }
+    * select() {
+      let res;
+      try {
+        res = yield app.mysql.select('student', {
+          where: {
+            name: [ 'ccc', 'ddd' ],
+          },
+        });
+      } catch (e) {
+        this.ctx.logger.error(e);
+        return false;
+      }
+      return res;
+    }
+    * transaction() {
+      const conn = yield app.mysql.beginTransaction();
+      try {
+        yield conn.update('user', { id: 2, age: 99 });
+        yield conn.update('student', { id: 1, snomber: 1411 });
+        yield conn.commit();
+      } catch (e) {
+        yield conn.rollback();
+        this.ctx.logger.error(e);
+        return false;
+      }
+    }
   }
   return Test;
 };

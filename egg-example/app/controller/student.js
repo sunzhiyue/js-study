@@ -17,6 +17,12 @@ module.exports = app => {
     * update() {
       this.ctx.body = yield this.service.student.update(this.ctx.request.body);
     }
+    * select() {
+      this.ctx.body = yield this.service.student.select(this.ctx.request.body);
+    }
+    * transaction() {
+      this.ctx.body = yield this.service.student.transaction();
+    }
   }
   return TestController;
 };

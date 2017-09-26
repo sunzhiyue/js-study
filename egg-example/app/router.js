@@ -16,7 +16,13 @@ module.exports = app => {
   app.post('/delete', 'test.delete');
   app.post('/update', 'test.update');
   app.post('/create1', 'student.create');
+  app.post('/select', 'student.select');
   app.post('/get1', 'student.get');
   app.post('/delete1', 'student.delete');
   app.post('/update1', 'student.update');
+  app.post('/create2', 'teacher.create');
+  app.post('/get2', 'teacher.get');
+  app.post('/delete2', 'teacher.delete');
+  app.post('/update2', 'teacher.update');
+  app.post('/transaction', 'student.transaction');
 };
