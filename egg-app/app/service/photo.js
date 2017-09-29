@@ -4,8 +4,8 @@
 'use strict';
 
 module.exports = app => {
-  class Test extends app.Service {
-    * create(param) {
+  class Photo extends app.Service {
+    * upload(param) {
       try {
         yield app.mysql.insert('photo', param);
       } catch (e) {
@@ -14,36 +14,29 @@ module.exports = app => {
       }
       return true;
     }
-
-    * get(req) {
+    * vote(param) {
+      try {
+        yield app.mysql.insert('photo', param);
+      } catch (e) {
+        this.ctx.logger.error(e);
+        return false;
+      }
+      return true;
+    }
+    * list(param) {
       let res;
       try {
-        res = yield app.mysql.get('photo', req);
+        res = yield app.mysql.select('photo', {
+          where: {
+            id: param,
+          },
+        });
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
       }
       return res;
     }
-
-    * delete(param) {
-      try {
-        yield app.mysql.delete('photo', param);
-      } catch (e) {
-        this.ctx.logger.error(e);
-        return false;
-      }
-      return true;
-    }
-    * update(param) {
-      try {
-        yield app.mysql.update('photo', param);
-      } catch (e) {
-        this.ctx.logger.error(e);
-        return false;
-      }
-      return true;
-    }
   }
-  return Test;
+  return Photo;
 };
