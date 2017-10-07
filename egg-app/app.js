@@ -32,7 +32,7 @@ module.exports = app => {
         table.increments();
         table.string('Wechat').notNullable().defaultTo('');
         table.string('model').notNullable().defaultTo('');
-        table.integer('vote').notNullable().defaultTo(0);
+        table.integer('vote').notNullable().defaultTo(3);
         table.string('state').notNullable().defaultTo('');
         table.string('URL').notNullable().defaultTo('');
         table.timestamp('create_at').defaultTo(knex.fn.now());
