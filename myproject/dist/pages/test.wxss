@@ -1,0 +1,1 @@
+.button{background-color:blueviolet}.button2{background-color:wheat;size:"mini"}.other-button-hover{background-color:blue}.checkbox{display:flex;flex-direction:column}
