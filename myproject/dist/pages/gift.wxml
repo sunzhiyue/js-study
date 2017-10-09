@@ -1,0 +1,44 @@
+
+  <view class="">
+
+    <view class="">
+      <text class="head">简单2步，选中心动好礼</text>
+    </view>
+
+  <view class="ring">
+    <view class="">
+      <image class="icon" src="{{person}}"/>
+    </view>
+    <view class="line"/>
+    <view class="">
+      <image class="icon" src="{{like}}"/>
+    </view>
+
+    <view class="line"/>
+      <image class="icon" src="{{finish}}"/>
+  </view>
+
+    <view class="body">
+      <text class="">送给TA</text>
+      <text class="">TA喜欢的</text>
+      <text class="">完成</text>
+    </view>
+
+    <view class="give">
+      <text>送她</text>
+      <text>送他</text>
+    </view>
+    <view class="box">
+      <view class="six"><text class="">自己</text></view>
+      <view class="six"><text class="">自己</text></view>
+      <view class="six"><text class="">自己</text></view>
+    </view>
+     <view class="box">
+      <view class="six"><text class="">自己</text></view>
+      <view class="six"><text class="">自己</text></view>
+      <view class="six"><text class="">自己</text></view>
+    </view>
+    <view class="find">
+      <text class="text">先跳过，随便逛逛></text>
+    </view>
+  </view>

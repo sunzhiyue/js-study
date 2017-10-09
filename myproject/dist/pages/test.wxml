@@ -1,88 +1,128 @@
 
-<view>
   <view>
-      <text>姓名：孙志越</text>
-  </view>
-  <view>
-      <text>性别：男</text>
-  </view>
-  <view>
-      <text>年龄：21</text>
-  </view>
-  <view>
-      <text>出生年月：1996-01-12</text>
-  </view>
-  <view>
+    <view class="view">
+      <text class="text">姓名：孙志越</text>
+      <text class="text">性别：男</text>
+      <text class="text">年龄：21</text>
+    </view>
+    <view class="box">  
+      <text class="text">出生年月：1996-01-12</text>
       <text>学校：华北电力大学科技学院</text>
-  </view>
-  <view>
       <text>星座：摩羯座</text>
-  </view>
-  <view>
       <text>手机号：182-0255-0589</text>
-  </view>
-  <view>
       <text>邮箱：sunzhiue@outlook.com</text>
-  </view>
-  <view>
+    </view>  
+    <view class="view">
       <text>家乡：天津</text>
-  </view>
-  <view>
       <text>爱好：计算机</text>
-  </view>
-  <button class="button" hover-class="other-button-hover" open-type="share"> 按钮 </button>
-  <button class="button2" size="mini" type="primary" bindtap="onLoa"> 按钮2 </button>
-  <text>{{a}}</text>
-  <checkbox-group bindchange="checkboxChange">
-  <label class="checkbox"  wx:for="{{items}}">
-    <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-  </label>
-</checkbox-group>
-<radio-group bindchange="radioChange">
-  <label class="checkbox"  wx:for="{{items1}}">
-    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-  </label>
-</radio-group>
-<form bindsubmit="formSubmit" bindreset="formReset">
-  <view class="section section_gap">
-    <view class="section__title">开关</view>
-    <switch name="switch"/>
-  </view>
-  <view class="section section_gap">
-    <view class="section__title">滑动选择</view>
-    <slider name="slider" show-value/>
-  </view>
-
-  <view class="section">
-    <view class="section__title">input</view>
-    <input name="input" placeholder="please input here"/>
-  </view>
-  <view class="section section_gap">
-    <view class="section__title">radio</view>
-    <radio-group name="radio-group">
-      <label><radio value="radio1"/>radio1</label>
-      <label><radio value="radio2"/>radio2</label>
-    </radio-group>
-  </view>
-  <view class="section section_gap">
-    <view class="section__title">checkbox</view>
-    <checkbox-group name="checkbox">
-      <label><checkbox value="checkbox1"/>checkbox1</label>
-      <label><checkbox value="checkbox2"/>checkbox2</label>
+    </view>  
+    <button class="button" hover-class="other-button-hover" open-type="share"> 按钮 </button>
+    <button class="button2" size="mini" type="primary" bindtap="onLoa"> 按钮2 </button>
+    <text>{{a}}</text>
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox"  wx:for="{{items}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
     </checkbox-group>
-  </view>
-  <view class="btn-area">
-    <button formType="submit">Submit</button>
-    <button formType="reset">Reset</button>
-  </view>
-</form>
-<view class="section">
-  <input placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}"/>
-  <view class="btn-area">
-    <button bindtap="bindButtonTap">使得输入框获取焦点</button>
-  </view>
+    <radio-group bindchange="radioChange">
+      <label class="checkbox"  wx:for="{{items1}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </radio-group>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section section_gap">
+        <view class="section__title">开关</view>
+        <switch name="switch"/>
+      </view>
+      <view class="section section_gap">
+        <view class="section__title">滑动选择</view>
+        <slider name="slider" show-value/>
+      </view>
+
+      <view class="section">
+        <view class="section__title">input</view>
+        <input name="input" placeholder="please input here"/>
+      </view>
+      <view class="section section_gap">
+        <view class="section__title">radio</view>
+        <radio-group name="radio-group">
+          <label>
+            <radio value="radio1"/>radio1</label>
+          <label>
+            <radio value="radio2"/>radio2</label>
+        </radio-group>
+      </view>
+      <view class="section section_gap">
+        <view class="section__title">checkbox</view>
+        <checkbox-group name="checkbox">
+          <label>
+            <checkbox value="checkbox1"/>checkbox1</label>
+          <label>
+            <checkbox value="checkbox2"/>checkbox2</label>
+        </checkbox-group>
+      </view>
+      <view class="btn-area">
+        <button formType="submit">Submit</button>
+        <button formType="reset">Reset</button>
+      </view>
+    </form>
+    <view class="section">
+      <input placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}"/>
+      <view class="btn-area">
+        <button bindtap="bindButtonTap">使得输入框获取焦点</button>
+      </view>
+    </view>
+    <view class="section">
+      <input maxlength="10" placeholder="最大输入长度10"/>
+    </view>
+    <view class="container">
+      <video src="{{src}}"/>
+      <button bindtap="bindButtonTap">获取视频</button>
+    </view>
+    <view class="container">
+      <image src="{{src}}"/>
+      <button bindtap="ButtonTap">获取图片</button>
+    </view>
+    <view class="container">
+      <button bindtap="Button">扫码</button>
+    </view>
+    <view>
+      <view>{{year}}年{{month}}月{{day}}日</view>
+      <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+        <picker-view-column>
+          <view wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+    <view class="section">
+      <view class="section__title">时间选择器</view>
+      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          当前选择: {{time}}
+        </view>
+      </picker>
+    </view>
+    <view class="section">
+      <view class="section__title">多列选择器</view>
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view class="picker">
+          当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+        </view>
+      </picker>
+    </view>
+<view>
+  <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop/>
+
+<button type="primary" bindtap="audioPlay">播放</button>
+<button type="primary" bindtap="audioPause">暂停</button>
+<button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
+<button type="primary" bindtap="audioStart">回到开头</button>
+
 </view>
-<view class="section">
-  <input maxlength="10" placeholder="最大输入长度10"/>
-</view>
-</view>
+  </view>

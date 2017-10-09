@@ -1,0 +1,126 @@
+<style lang="less">
+.head {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px 70px 40px 70px;
+}
+.give {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 30px 130px;
+}
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid grey;
+}
+.ring {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px 70px 40px 70px;
+
+}
+.line {
+  height: 1px;
+  width: 50px;
+  background-color: grey;
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 50px;
+}
+.six {
+  height: 70px;
+  width: 70px;
+  background-color: antiquewhite;
+  margin: 7px;
+}
+.text {
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.find {
+  margin: 120px 135px;
+}
+
+</style>
+<template>
+  <view class="">
+
+    <view class="">
+      <text class="head">简单2步，选中心动好礼</text>
+    </view>
+
+  <view class="ring">
+    <view class="">
+      <image class = "icon" src = "{{person}}" />
+    </view>
+    <view class="line"></view>
+    <view class="">
+      <image class = "icon" src = "{{like}}" />
+    </view>
+
+    <view class="line"></view>
+      <image class = "icon" src = "{{finish}}" />
+  </view>
+
+    <view class="body">
+      <text class="">送给TA</text>
+      <text class="">TA喜欢的</text>
+      <text class="">完成</text>
+    </view>
+
+    <view class="give">
+      <text>送她</text>
+      <text>送他</text>
+    </view>
+    <view class = "box">
+      <view class="six"><text class= "">自己</text></view>
+      <view class="six"><text class= "">自己</text></view>
+      <view class="six"><text class= "">自己</text></view>
+    </view>
+     <view class = "box">
+      <view class="six"><text class= "">自己</text></view>
+      <view class="six"><text class= "">自己</text></view>
+      <view class="six"><text class= "">自己</text></view>
+    </view>
+    <view class= "find">
+      <text class= "text">先跳过，随便逛逛></text>
+    </view>
+  </view> 
+</template>
+<script>
+import wepy from 'wepy'
+export default class Index extends wepy.page {
+  config = {
+    navigationBarTitleText: '礼物说'
+  }
+  data = {
+    src: '',
+    person: '../image/个人.png',
+    like: '../image/礼物.png',
+    finish: '../image/完成.png'
+  }
+}
+
+</script>
