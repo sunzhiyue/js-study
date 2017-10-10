@@ -6,16 +6,18 @@
     </view>
 
   <view class="ring">
-    <view class="">
-      <image class="icon" src="{{person}}"/>
+    <view class="icon">
+      <image class="photo" src="{{person}}"/>
     </view>
     <view class="line"/>
-    <view class="">
-      <image class="icon" src="{{like}}"/>
+    <view class="icon">
+      <image class="photo" src="{{like}}"/>
     </view>
 
     <view class="line"/>
-      <image class="icon" src="{{finish}}"/>
+    <view class="icon">
+      <image class="photo" src="{{finish}}"/>
+    </view>
   </view>
 
     <view class="body">
@@ -25,18 +27,37 @@
     </view>
 
     <view class="give">
-      <text>送她</text>
-      <text>送他</text>
+      <text class="give-tex">送她</text>
+      <text class="give-text">送他</text>
     </view>
     <view class="box">
-      <view class="six"><text class="">自己</text></view>
-      <view class="six"><text class="">自己</text></view>
-      <view class="six"><text class="">自己</text></view>
+      <view class="six six-text">
+        <image class="six-photo" src="{{camera}}"/>
+        <text>自己</text>
+      </view>
+      <view class="six six-text">
+        <image class="six-photo" src="{{ring}}"/>
+        <text>老婆/女票</text>
+      </view>
+      <view class="six six-text">
+        <image class="six-photo" src="{{lipstick}}"/>
+        <text>姐妹闺蜜</text>
+      </view>
     </view>
+
      <view class="box">
-      <view class="six"><text class="">自己</text></view>
-      <view class="six"><text class="">自己</text></view>
-      <view class="six"><text class="">自己</text></view>
+      <view class="six six-text">
+        <image class="six-photo" src="{{flower}}"/>
+        <text>妈妈</text>
+      </view>
+      <view class="six six-text">
+        <image class="six-photo" src="{{elder}}"/>
+        <text>长辈</text>
+      </view>
+      <view class="six six-text">
+        <image class="six-photo" src="{{wallet}}"/>
+        <text>同事</text>
+      </view>
     </view>
     <view class="find">
       <text class="text">先跳过，随便逛逛></text>
