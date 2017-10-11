@@ -9,9 +9,26 @@
 .body {
   font-size: 12px;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0px 4.9rem 60px 4.9rem;
+  width: 12rem;
+  width: 100%;
+}
+.bodyone {
+  display: flex;
+  width: 3.3rem;
+  height: 0.9rem;
+  margin: 0.1rem 0rem 1px 5.3rem;
+}
+.bodytwo {
+  display: flex;
+  width: 4rem;
+  height: 0.9rem;
+  margin: 0.1rem 0.4rem 1px 0rem;
+}
+.bodythree {
+  display: flex;
+  width: 2rem;
+  height: 0.9rem;
+  margin: 0.1rem 1px 1px 0.2rem;
 }
 .give {
   font-size: 15px;
@@ -104,7 +121,7 @@
     </view>
 
   <view class = "ring">
-    <view class = "icon">
+    <view class = "icon" style = "background-color: #000">
       <image class = "photo" src = "{{person}}" />
     </view>
     <view class = "line"></view>
@@ -119,14 +136,14 @@
   </view>
 
     <view class="body">
-      <text class="">送给TA</text>
-      <text class="">TA喜欢的</text>
-      <text class="">完成</text>
+      <view class = "bodyone"><text class="">送给TA</text></view>
+      <view class = "bodytwo"><text class="">TA喜欢的</text></view>
+      <view class = "bodythree"><text class="">完成</text></view>
     </view>
 
     <view class="give">
-      <text class = "give-tex">送她</text>
-      <text class = "give-text">送他</text>
+      <text @tap = "she" style = "color:{{red}}; border-bottom:3px solid {{solidred}}">送她</text>
+      <text @tap = "he" style = "color:{{gray}}; border-bottom:3px solid {{solidgray}}">送他</text>
     </view>
     <view class = "box">
       <view class="six six-text">
@@ -135,18 +152,18 @@
       </view>
       <view class="six six-text">
         <image class = "six-photo" src = "{{ring}}" />
-        <text>老婆/女票</text>
+        <text>{{wife}}</text>
       </view>
       <view class="six six-text">
         <image class = "six-photo" src = "{{lipstick}}" />
-        <text>姐妹闺蜜</text>
+        <text>{{sister}}</text>
       </view>
     </view>
 
      <view class = "box">
       <view class="six six-text">
         <image class = "six-photo" src = "{{flower}}" />
-        <text>妈妈</text>
+        <text>{{mother}}</text>
       </view>
       <view class="six six-text">
         <image class = "six-photo" src = "{{elder}}" />
@@ -178,7 +195,44 @@ export default class Index extends wepy.page {
     lipstick: '../image/口红.png',
     flower: '../image/花束.png',
     elder: '../image/送长辈.png',
-    wallet: '../image/钱包.png'
+    wallet: '../image/钱包.png',
+    wife: '老婆/女票',
+    sister: '姐妹/闺蜜',
+    mother: '妈妈',
+    red: 'red',
+    solidred: 'red',
+    gray: 'gray',
+    solidgray: '#fff'
+  }
+  methods = {
+    she() {
+      let self = this
+      self.camera = '../image/相机.png'
+      self.ring = '../image/戒指.png'
+      self.lipstick = '../image/口红.png'
+      self.flower = '../image/花束.png'
+      self.elder = '../image/送长辈.png'
+      self.wallet = '../image/钱包.png'
+      self.wife = '老婆/女票'
+      self.sister = '姐妹/闺蜜'
+      self.mother = '妈妈'
+      self.red = 'red'
+      self.solidred = 'red'
+      self.gray = 'gray'
+      self.solidgray = '#fff'
+    },
+    he() {
+      let self = this
+      self.lipstick = '../image/手表.png'
+      self.flower = '../image/眼镜.png'
+      self.wife = '老公/男票'
+      self.sister = '兄弟/基友'
+      self.mother = '爸爸'
+      self.red = 'gray'
+      self.solidred = '#fff'
+      self.gray = 'red'
+      self.solidgray = 'red'
+    }
   }
 }
 
